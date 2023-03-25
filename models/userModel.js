@@ -47,7 +47,7 @@ userSchema.methods.matchPassword = async function (password) {
 
 //SIGN TOKEN
 userSchema.methods.getSignedToken = function (res) {
-  const acccesToken = JWT.sign(
+  const accessToken = JWT.sign(
     { id: this._id },
     process.env.JWT_ACCESS_SECRET,
     { expiresIn: process.env.JWT_ACCESS_EXPIREIN }
